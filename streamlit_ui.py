@@ -6,7 +6,11 @@ from streamlit_folium import st_folium
 from collections import Counter
 import json, math
 from AVL_Implementation import importing_data, interval
-
+st.set_page_config(
+    page_title="Timeline visualization",
+    layout="wide",
+    page_icon="🗺️"
+)
 st.title("Google Maps Timeline Visualization")
 
 # File upload
