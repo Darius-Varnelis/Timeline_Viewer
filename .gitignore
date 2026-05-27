@@ -6,3 +6,4 @@ venv/
 Map_UI.py
 Test_vs_list.py
 *.json
+.idea
