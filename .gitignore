@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.vscode/
+Map_UI.py
+Test_vs_list.py
+*.json
