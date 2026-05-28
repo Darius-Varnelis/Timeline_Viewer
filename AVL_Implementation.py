@@ -102,7 +102,17 @@ def insert(node, startTime, values, endTime = None):
     # Return the (unchanged) node pointer
     return node
 
+def min_time(node):
+    if not node.left:
+        return node.key
+    else:
+        return min_time(node.left)
 
+def max_time(node):
+    if not node.right:
+        return node.key
+    else:
+        return max_time(node.right)
 def delete_node(root, key):
     # STEP 1: PERFORM STANDARD BST DELETE
     if root is None:

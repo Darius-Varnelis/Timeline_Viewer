@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from streamlit_folium import st_folium
 from collections import Counter
 import json, math
-from AVL_Implementation import importing_data, interval
+from AVL_Implementation import importing_data, interval, min_time, max_time
 st.set_page_config(
     page_title="Timeline visualization",
     layout="wide",
@@ -34,12 +34,12 @@ root = st.session_state.get("root")
 
 if root:
     startDate = datetime.combine(
-        st.date_input("Start date"),
+        st.date_input("Start date", min_value=min_time(root), max_value=max_time(root)),
         datetime.min.time(),
         tzinfo=timezone.utc
     )
     endDate = datetime.combine(
-        st.date_input("End date"),
+        st.date_input("End date", min_value=min_time(root), max_value=max_time(root)),
         datetime.max.time(),
         tzinfo=timezone.utc
     )
